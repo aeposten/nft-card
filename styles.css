@@ -10,10 +10,9 @@
 - White: hsl(0, 0%, 100%)
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap');
 
 /* Variables for colors */
-
 :root {
   --sftblue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
@@ -26,12 +25,16 @@
   margin: 0;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
+/* Grouping frequently used selectors */
+body, .nft-card {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
   background-color: var(--mainbg);
   font-family: 'Outfit', sans-serif;
 }
@@ -39,31 +42,33 @@ body {
 
 main {
   width: 87.2%;
+  max-width: 21.875rem;
+  min-width: 21.875rem;
   border-radius: 1em;
   background-color: var(--cardbg);
 }
 
+/* NFT Card component */
 .nft-card {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 0.75em;
   margin: 1.5em;
 }
 
+/* Image Component and associated transformation effect*/
 .img-container {
   display: flex;
-  width: 17rem;
-  min-height: 17rem;
+  width: 19rem;
+  min-height: 19rem;
   position: relative;
   overflow: hidden;
   border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .hero-img {
-  width: 17rem;
-  height: 17rem;
+  width: 19rem;
+  height: 19rem;
   position: absolute;
 }
 
@@ -98,20 +103,32 @@ main {
   opacity: 100%;
 }
 
+/* Text Content */
 .txt-content {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
+/* Links */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:focus {
+  color: var(--cyan)
+}
+
 h1 {
+  margin-top: 0.5em;
   font-size: 1.375rem;
   color: white;
 }
 
 .description {
   font-size: 1.125rem;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.625;
   color: var(--sftblue)
 }
@@ -144,6 +161,8 @@ h1 {
   justify-content: flex-start;
   gap: 1em;
   font-size: 0.9375rem;
+  font-weight: 200;
+  color: var(--sftblue);
 }
 
 .avatar {
@@ -152,10 +171,3 @@ h1 {
   border: 0.1em solid white;
 }
 
-.attribution-txt {
-  color: var(--sftblue);
-}
-
-.name {
-  color: white;
-}
