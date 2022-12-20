@@ -1,0 +1,69 @@
+/* 
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* Variables for colors */
+
+:root {
+  --sftblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --blueline: hsl(215, 32%, 27%);
+  --cardbg: hsl(216, 50%, 16%);
+  --mainbg: hsl(217, 54%, 11%);
+}
+
+.img-container {
+  display: grid;
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container:hover
+.cover {
+  transition: ease-in 0.2s;
+  opacity: 30%;
+}
+
+.img-container:hover
+.eye-icon {
+  transition: ease-in 0.2s;
+  opacity: 100%;
+}
+
+.hero-img {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  max-width: 10rem;
+}
+
+.cover {
+  width: 10em;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: var(--cyan);
+  opacity: 0%;
+  transition: ease-in 0.2s;
+}
+
+.eye-icon {
+    display: grid;
+    position: relative;
+  place-self: center;
+  z-index: 1;
+  opacity: 0%;
+  transition: ease-in 0.2s;
+}
