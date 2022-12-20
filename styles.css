@@ -22,35 +22,53 @@
   --mainbg: hsl(217, 54%, 11%);
 }
 
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainbg);
+  font-family: 'Outfit', sans-serif;
+}
+
+
+main {
+  width: 87.2%;
+  border-radius: 1em;
+  background-color: var(--cardbg);
+}
+
+.nft-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  margin: 1.5em;
+}
+
 .img-container {
-  display: grid;
-  height: 10rem;
-  width: 10rem;
+  display: flex;
+  width: 17rem;
+  min-height: 17rem;
   position: relative;
   overflow: hidden;
-}
-
-.img-container:hover
-.cover {
-  transition: ease-in 0.2s;
-  opacity: 30%;
-}
-
-.img-container:hover
-.eye-icon {
-  transition: ease-in 0.2s;
-  opacity: 100%;
+  border-radius: 0.5em;
 }
 
 .hero-img {
-  width: 10rem;
-  height: 10rem;
+  width: 17rem;
+  height: 17rem;
   position: absolute;
-  max-width: 10rem;
 }
 
 .cover {
-  width: 10em;
+  width: 100%;
   height: 100%;
   top: 0;
   position: absolute;
@@ -60,10 +78,84 @@
 }
 
 .eye-icon {
-    display: grid;
-    position: relative;
-  place-self: center;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  position: relative;
+  margin: auto;
   z-index: 1;
   opacity: 0%;
   transition: ease-in 0.2s;
+}
+
+.img-container:hover .cover {
+  transition: ease-in 0.2s;
+  opacity: 30%;
+}
+
+.img-container:hover .eye-icon {
+  transition: ease-in 0.2s;
+  opacity: 100%;
+}
+
+.txt-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+h1 {
+  font-size: 1.375rem;
+  color: white;
+}
+
+.description {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.625;
+  color: var(--sftblue)
+}
+
+.value {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  border-bottom: 0.1em solid var(--blueline);
+  font-size: 0.9375em;
+}
+
+.eth {
+  color: var(--cyan)
+}
+
+.days {
+  color: var(--sftblue)
+}
+
+.eth, .days {
+  display:flex;
+  gap: 0.5em;
+}
+
+.attribution {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  font-size: 0.9375rem;
+}
+
+.avatar {
+  width: 2rem;
+  border-radius: 50%;
+  border: 0.1em solid white;
+}
+
+.attribution-txt {
+  color: var(--sftblue);
+}
+
+.name {
+  color: white;
 }
